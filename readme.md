@@ -1,21 +1,21 @@
 # Projeto *PalpiteBox*
 
-  Projeto desenvolvido durante o workshop online **Semana Fullstack Master**, patrocinado pela [DevPlano](https://devpleno.com).
+[![HitCount](http://hits.dwyl.com/llutti/llutti/palpitebox.svg)](http://hits.dwyl.com/llutti/llutti/palpitebox)
 
-## Escopo do projeto
 Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões sobre os estabelecimentos comerciais e, em troca, receber cupons de desconto e vantagens.
 
-As principais tecnologias e/ou ferramentas que serão utilizadas  para a criação desta solução:
-- NodeJS [https://www.nodejs.org]
-- React [https://pt-br.reactjs.org/]
-- NextJS [https://nextjs.org/]
-- Tailwindcss [https://tailwindcss.com/]
-- Planilha do Google Docs [https://g.co/kgs/MVHtjb]
-
-## Pré-requisitos para criação do projeto
+### Pré-requisitos:
 - NodeJS (versão 12 ou superior) [https://www.nodejs.org]
 - NPM [*instalado juntamento com o NodeJS*] ou YARN [https://classic.yarnpkg.com/]
 - Editor de código (Visual Studio Code, por exemplo) [https://code.visualstudio.com/]
+
+## Construído com:
+* [NodeJS](https://www.nodejs.org)
+* [NextJS](https://nextjs.org/) - React Framework.
+* [TailwindCSS](https://tailwindcss.com/) - Um CSS framework para rápida contrução de interfaces customizadas.
+* [Figma](https://figma.com/) - Ferramenta Online para prototipagem.
+* [PurgeCSS](https://purgecss.com/) - Remover CSS não utilizados.
+* [Google Docs](https://g.co/kgs/MVHtjb) - Planilha utilizada como repositório
 
 ## Criar o projeto
 - Criar a pasta: `md palpitebox`
@@ -38,3 +38,17 @@ As principais tecnologias e/ou ferramentas que serão utilizadas  para a criaç�
 - `npx tailwindcss init`
 - `yarn add postcss-import`
 - `yarn add autoprefixer`
+
+## Author:
+
+* **Luciano Cargnelutti** - [LinkedIn](https://www.linkedin.com/in/llutti/)
+
+
+
+## Licença
+
+Este projeto é licenciado sobre a licença MIT - veja [LICENSE.md](LICENSE.md) para mais informações.
+
+## Acknowledgments
+
+* Projeto desenvolvido durante o workshop online **Semana Fullstack Master** do [DevPleno](https://devpleno.com).
