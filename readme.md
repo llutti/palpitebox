@@ -38,6 +38,9 @@ Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões 
 - `npx tailwindcss init`
 - `yarn add postcss-import`
 - `yarn add autoprefixer`
+- `yarn add swr`
+- `yarn add google-spreadsheet`
+- `yarn add moment`
 
 ## Author:
 
