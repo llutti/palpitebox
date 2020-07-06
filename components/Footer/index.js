@@ -1,18 +1,24 @@
 import React from 'react';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Footer = () =>
 {
   return (
-    <div className='bg-gray-700 p-4'>
-      <div className='container mx-auto text-center font-bold text-white'>
-        Projeto Desenvolvido por: llutti /
-        <a className='px-2 hover:underline' target='_blank' href='https://linkedin.com/in/llutti'>Linkedin</a> /
-        <a className='px-2 hover:underline' target='_blank' href='https://github.com/llutti'>Github</a>
-        <div className='mt-2'>
-          <img className='inline p-4' src='/logo_semana_fsm.png' alt='PalpiteBox' />
-          <img className='inline p-4' src='/logo_devpleno.png' alt='PalpiteBox' />
-
+    <div className='bg-gray-700 p-2'>
+      <div className='container flex flex-col md:flex-row items-center justify-between mx-auto text-white text-xs'>
+        <img className='inline p-1' src='/logo_semana_fsm.png' alt='PalpiteBox' />
+        <div className='flex flex-row items-center'>
+          <div>
+            Projeto Desenvolvido por <span className='font-bold'>llutti</span>
+          </div>
+          <a className='pl-3 text-lg hover:font-bold' target='_blank' href='https://linkedin.com/in/llutti'>
+            <FaLinkedinIn />
+          </a>
+          <a className='pl-3 text-lg hover:font-bold' target='_blank' href='https://github.com/llutti'>
+            <FaGithub />
+          </a>
         </div>
+        <img className='inline p-1' src='/logo_devpleno.png' alt='PalpiteBox' />
       </div>
     </div>
   );

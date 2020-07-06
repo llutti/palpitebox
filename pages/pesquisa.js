@@ -1,5 +1,6 @@
 ﻿import React, { useState } from 'react';
 import PageTitle from '../components/PageTitle';
+import { FaStar, FaRegStar } from 'react-icons/fa';
 
 const Pesquisa = () =>
 {
@@ -7,7 +8,7 @@ const Pesquisa = () =>
     Nome: '',
     Email: '',
     Whatsapp: '',
-    Nota: 0
+    Nota: -1
   });
   const [success, setSuccess] = useState(false);
   const [retorno, setRetorno] = useState({});
@@ -32,6 +33,17 @@ const Pesquisa = () =>
     }
   }
 
+  const onClick = (name, value) =>
+  {
+    const nome = name;
+    const valor = value;
+
+    setForm(old => ({
+      ...old,
+      [nome]: valor
+    }))
+  }
+
   const onChange = evt =>
   {
     const { name, value } = evt.target;
@@ -43,43 +55,48 @@ const Pesquisa = () =>
   }
   return (
     <div>
-      <PageTitle title='Pesquisa'/>
-      <h1 className='text-center font-bold my-4 text-2xl'>Criticas e Sugestões</h1>
+      <PageTitle title='Pesquisa' />
+      <h1 className='text-center font-bold mb-4 text-2xl'>Criticas e Sugestões</h1>
 
-      <p className='text-center mb-6'>
+      <p className='text-center mb-4'>
         O restaurante X sempre busca por atender melhor seus clientes.<br />
         Por isso, estamos sempre abertos a ouvir a sua opinão.
       </p>
 
       {!success &&
-        <div className='w-1/5 mx-auto pb-8'>
+        <div className='w-1/3 mx-auto pb-3'>
 
           <label className='font-bold'>Seu nome:</label>
-          <input type='text' name='Nome' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} value={form.Nome} />
+          <input type='text' name='Nome' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} value={form.Nome} />
 
           <label className='font-bold'>E-mail:</label>
-          <input type='text' name='Email' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='E-mail' onChange={onChange} value={form.Email} />
+          <input type='text' name='Email' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='E-mail' onChange={onChange} value={form.Email} />
 
           <label className='font-bold'>Whatsapp:</label>
-          <input type='text' name='Whatsapp' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} value={form.Whatsapp} />
+          <input type='text' name='Whatsapp' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} value={form.Whatsapp} />
 
-          <label className='font-bold'>Nota:</label>
-          <div className='flex b-6'>
+          <div className='flex flex-row itens-center b-6 my-5'>
+            <label className='font-bold w-1/7'>Nota:</label>
             {
               notas.map(nota =>
               {
                 return (
-                  <label key={'label' + nota} className='block w-1/6 text-center'>
-                    {nota}<br />
-                    <input type='radio' key={nota} name='Nota' value={nota} onChange={onChange} />
+                  <label key={'labelStar' + nota} className='w-1/7 px-2 text-2xl cursor-pointer text-center text-yellow-500'>
+                    {
+                      nota <= form.Nota && < FaStar key={'star' + nota} onClick={() => onClick('Nota', nota)} />
+                    }
+                    {
+                      nota > form.Nota && < FaRegStar key={'star' + nota} onClick={() => onClick('Nota', nota)} />
+                    }
                   </label>
                 )
               })
             }
           </div>
 
-          <button className='bg-blue-400 px-12 py-4 font-bold  rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
-
+          <div className='text-center'>
+            <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
+          </div>
         </div>
       }
       {
