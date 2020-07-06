@@ -12,7 +12,7 @@ const Index = () =>
 
   return (
     <div>
-      <PageTitle title='Seja bem vindo'/>
+      <PageTitle title='Seja bem vindo' />
       <p className='mt-12 text-center'>
         O restaurante X sempre busca por atender melhor seus clientes.<br />
         Por isso, estamos sempre abertos a ouvir a sua opinão.
@@ -26,7 +26,7 @@ const Index = () =>
         </Link>
       </div>
 
-      {!data && <p>Carregando...</p>}
+      {!data && <div className="mx-auto loader"></div>}
       {!error && data && data?.showCupom &&
         <p className='mt-12 mb-12 text-center'>
           {data?.messageCupom}

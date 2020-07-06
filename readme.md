@@ -4,6 +4,8 @@
 
 Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões sobre os estabelecimentos comerciais e, em troca, receber cupons de desconto e vantagens.
 
+![Print da tela do aplicativo](https://github.com/llutti/palpitebox/blob/master/screens/Print-tela-principal.png)
+
 ### Pré-requisitos:
 - NodeJS (versão 12 ou superior) [https://www.nodejs.org]
 - NPM [*instalado juntamento com o NodeJS*] ou YARN [https://classic.yarnpkg.com/]
