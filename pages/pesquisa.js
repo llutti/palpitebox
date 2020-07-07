@@ -144,11 +144,11 @@ const Pesquisa = () =>
   return (
     <div>
       <PageTitle title='Pesquisa' />
-      <h1 className='text-center font-bold mb-4 text-2xl'>Criticas e Sugestões</h1>
+      <h1 className='text-center font-bold mb-4 text-2xl'>Críticas e Sugestões</h1>
 
       <p className='text-center mb-4'>
-        O restaurante X sempre busca por atender melhor seus clientes.<br />
-        Por isso, estamos sempre abertos a ouvir a sua opinão.
+        Nosso restaurante busca sempre prestar o melhor atendimento à seus clientes.<br />
+        Por isso, gostariamos de saber sua opinão.
       </p>
 
       {!success &&
@@ -215,7 +215,7 @@ const Pesquisa = () =>
       {
         success &&
         <div className='w-1/4 mx-auto pb-8'>
-          <p className='text-center mb-6 bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por sua Sugestão ou Crítica</p>
+          <p className='text-center mb-6 bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Agradecido por sua Sugestão ou Crítica</p>
           {
             retorno.showCupom &&
             <div className='text-center border p-4 mb-4'>
