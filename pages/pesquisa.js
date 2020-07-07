@@ -8,11 +8,11 @@ const Pesquisa = () =>
     Nome: '',
     Email: '',
     Whatsapp: '',
-    Nota: -1
+    Nota: 0
   });
   const [success, setSuccess] = useState(false);
   const [retorno, setRetorno] = useState({});
-  const notas = [0, 1, 2, 3, 4, 5];
+  const notas = [1, 2, 3, 4, 5];
 
   const save = async () =>
   {
