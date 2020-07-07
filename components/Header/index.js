@@ -16,13 +16,13 @@ const Header = () =>
 
         <div className='w-full md:w-1/4 mr-auto flex items-center justify-center'>
           <Link href='/sobre'>
-            <a className='px-2 text-base hover:font-bold'>Sobre</a>
+            <a className='px-2 text-base md:hover:font-bold'>Sobre</a>
           </Link>
           <Link href='/contato'>
-            <a className='px-2 hover:font-bold'>Contato</a>
+            <a className='px-2 text-base md:hover:font-bold'>Contato</a>
           </Link>
           <Link href='/pesquisa'>
-            <a className='px-2 text-base hover:font-bold'>Pesquisa</a>
+            <a className='px-2 text-base md:hover:font-bold'>Pesquisa</a>
           </Link>
         </div>
       </div>
