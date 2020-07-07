@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 const Footer = () =>
 {
   return (
-    <div className='bg-gray-700 p-2'>
+    <div className='lg:fixed lg:bottom-0 w-full bg-gray-700 p-2'>
       <div className='container flex flex-col md:flex-row items-center justify-between mx-auto text-white text-xs'>
         <img className='inline p-1' src='/logo_semana_fsm.png' alt='PalpiteBox' />
         <div className='flex flex-row items-center'>
