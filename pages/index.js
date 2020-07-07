@@ -26,7 +26,14 @@ const Index = () =>
         </Link>
       </div>
 
-      {!data && <div className="mx-auto loader"></div>}
+      {
+        !data &&
+        <div class="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-none justify-center items-center flex">
+          <div class="relative w-auto my-6 mx-auto max-w-6xl">
+            <div className="mx-auto loader"></div>
+          </div>
+        </div>
+      }
       {!error && data && data?.showCupom &&
         <p className='mt-12 mb-12 text-center'>
           {data?.messageCupom}
