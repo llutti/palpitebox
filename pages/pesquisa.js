@@ -1,5 +1,5 @@
 ﻿import React, { useState } from 'react';
-import PageTitle from '../components/PageTitle';
+import SEO from '../components/SEO';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 
 const Pesquisa = () =>
@@ -143,7 +143,7 @@ const Pesquisa = () =>
 
   return (
     <div>
-      <PageTitle title='Pesquisa' />
+      <SEO title='Pesquisa' />
       <h1 className='text-center font-bold mb-4 text-2xl'>Críticas e Sugestões</h1>
 
       <p className='text-center mb-4'>

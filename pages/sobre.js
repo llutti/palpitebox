@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import PageTitle from '../components/PageTitle';
+import SEO from '../components/SEO';
 
 const Sobre = () =>
 {
   return (
     <div>
-      <PageTitle title='Sobre' />
+      <SEO title='Sobre' />
       <h4>Sobre!</h4>
       <div>
         <Link href='/'>

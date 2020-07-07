@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const PageTitle = ({ title }) =>
+const SEO = ({ title }) =>
 {
   return (
     <Head>
@@ -10,4 +10,4 @@ const PageTitle = ({ title }) =>
   )
 };
 
-export default PageTitle;
+export default SEO;

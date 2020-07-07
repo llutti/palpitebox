@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import PageTitle from '../components/PageTitle';
+import SEO from '../components/SEO';
 
 const Contato = () =>
 {
   return (
     <div>
-      <PageTitle title='Contato' />
+      <SEO title='Contato' />
       <h4>Contato</h4>
       <div>
         <Link href='/'>
