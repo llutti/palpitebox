@@ -28,8 +28,8 @@ const Index = () =>
 
       {
         !data &&
-        <div class="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-none justify-center items-center flex">
-          <div class="relative w-auto my-6 mx-auto max-w-6xl">
+        <div className="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-none justify-center items-center flex">
+          <div className="relative w-auto my-6 mx-auto max-w-6xl">
             <div className="mx-auto loader"></div>
           </div>
         </div>
