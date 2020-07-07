@@ -62,12 +62,11 @@ const Pesquisa = () =>
     catch (error)
     {
       console.log('Ocorreu eu erro ao salvar', error);
-      setForm(old => ({
-        ...old,
-        loading: false
-      }));
-
     }
+    setForm(old => ({
+      ...old,
+      loading: false
+    }));
   }
 
   const onClick = (name, value) =>
