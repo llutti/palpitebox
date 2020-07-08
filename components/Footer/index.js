@@ -11,10 +11,10 @@ const Footer = () =>
           <div>
             Projeto Desenvolvido por <span className='font-bold'>llutti</span>
           </div>
-          <a className='pl-3 text-lg hover:font-bold' rel="noopener" rel="noreferrer" target='_blank' href='https://linkedin.com/in/llutti'>
+          <a className='pl-3 text-lg' rel="noopener" rel="noreferrer" target='_blank' href='https://linkedin.com/in/llutti'>
             <FaLinkedinIn />
           </a>
-          <a className='pl-3 text-lg hover:font-bold' rel="noopener" rel="noreferrer" target='_blank' href='https://github.com/llutti'>
+          <a className='pl-3 text-lg' rel="noopener" rel="noreferrer" target='_blank' href='https://github.com/llutti'>
             <FaGithub />
           </a>
         </div>
