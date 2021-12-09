@@ -2,10 +2,6 @@
 .env.Local
 credencials.json
 
-# lock files
-package-lock.json
-yarn.lock
-
 # Logs
 logs
 *.log
