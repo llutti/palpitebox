@@ -42,7 +42,8 @@ Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões 
 - `yarn add autoprefixer`
 - `yarn add swr`
 - `yarn add google-spreadsheet`
-- `yarn add moment`
+- `yarn add luxon`
+- `yarn add -D @types/luxon`
 
 ## Author:
 

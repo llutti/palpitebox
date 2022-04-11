@@ -1,15 +1,15 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import moment from 'moment';
+import { DateTime } from 'luxon';
 import { fromBase64 } from '../../utils/base64';
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID);
 
 const gerarCupom = () =>
 {
-  const code = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16).toUpperCase();
+  const code = parseInt(DateTime.now().toFormat('YYMMDDHHmmssSSS')).toString(16).toUpperCase();
 
-  return `${code.substr(0, 4)}-${code.substr(4, 4)}-${code.substr(8, 4)}`
-}
+  return `${code.substring(0, 4)}-${code.substring(4, 4)}-${code.substring(8, 4)}`;
+};
 
 export default async (req, res) =>
 {
@@ -44,7 +44,7 @@ export default async (req, res) =>
       Email: dataBody.Email,
       Whatsapp: dataBody.Whatsapp,
       Nota: parseInt(dataBody.Nota),
-      'Data Preenchimento': moment().format('DD/MM/YYYY HH:mm:ss'),
+      'Data Preenchimento': DateTime.now().toFormat('DD/MM/YYYY HH:mm:ss'),
       Cupom,
       Promo
     });
