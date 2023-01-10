@@ -19,10 +19,8 @@ const Index = () =>
       </p>
 
       <div className="text-center my-12">
-        <Link href='/pesquisa'>
-          <a className='bg-blue-400 px-12 py-4 font-bold  rounded-lg shadow-lg hover:shadow'>
-            Acessar Pesquisa
-          </a>
+        <Link href='/pesquisa' className='bg-blue-400 px-12 py-4 font-bold  rounded-lg shadow-lg hover:shadow'>
+          Acessar Pesquisa
         </Link>
       </div>
 
@@ -34,13 +32,13 @@ const Index = () =>
           </div>
         </div>
       }
-      {!error && data && data?.showCupom &&
+      { !error && data && data?.showCupom &&
         <p className='mt-12 mb-12 text-center'>
-          {data?.messageCupom}
+          { data?.messageCupom }
         </p>
       }
     </div>
   );
-}
+};
 
 export default Index;

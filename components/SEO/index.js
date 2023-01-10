@@ -4,13 +4,14 @@ import { SEOConfig } from '../../config/SEOConfig';
 
 const SEO = ({ title }) =>
 {
+  const newTitle = `${title} - ${SEOConfig.title}`;
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <link rel="icon" type="image/png" href="/palpitebox.png" />
 
-      <title>{title} - {SEOConfig.title}</title>
+      <title>{newTitle}</title>
       <meta name="description" content={SEOConfig.description}></meta>
       <meta name="author" content={SEOConfig.author} />
       <meta name="image" content={SEOConfig.image} />

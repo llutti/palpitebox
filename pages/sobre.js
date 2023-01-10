@@ -10,7 +10,7 @@ const Sobre = () =>
       <h4>Sobre!</h4>
       <div>
         <Link href='/'>
-          <a>Home</a>
+          Home
         </Link>
       </div>
     </div>

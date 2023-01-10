@@ -10,7 +10,7 @@ const Contato = () =>
       <h4>Contato</h4>
       <div>
         <Link href='/'>
-          <a>Home</a>
+          Home
         </Link>
       </div>
     </div>
