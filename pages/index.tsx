@@ -2,8 +2,7 @@
 import useSWR from 'swr';
 import SEO from '../components/SEO';
 
-const fetcher = (...args) => fetch(...args).then(res => res.json());
-
+const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 const Index = () =>
 {
