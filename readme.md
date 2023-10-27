@@ -35,15 +35,15 @@ Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões 
   ```
 
 ## Instalação das dependencias
-- `yarn add next react react-dom`
-- `yarn add tailwindcss`
+- `npm i next react react-dom`
+- `npm i tailwindcss`
 - `npx tailwindcss init`
-- `yarn add postcss-import`
-- `yarn add autoprefixer`
-- `yarn add swr`
-- `yarn add google-spreadsheet`
-- `yarn add luxon`
-- `yarn add -D @types/luxon`
+- `npm i postcss-import`
+- `npm i autoprefixer`
+- `npm i swr`
+- `npm i google-spreadsheet`
+- `npm i luxon`
+- `npm i -D @types/luxon`
 
 ## Author:
 
