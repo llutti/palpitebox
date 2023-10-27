@@ -1,5 +1,4 @@
-﻿import React from 'react';
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import useSWR from 'swr';
 import SEO from '../components/SEO';
 
@@ -32,9 +31,9 @@ const Index = () =>
           </div>
         </div>
       }
-      { !error && data && data?.showCupom &&
+      {!error && data && data?.showCupom &&
         <p className='mt-12 mb-12 text-center'>
-          { data?.messageCupom }
+          {data?.messageCupom}
         </p>
       }
     </div>

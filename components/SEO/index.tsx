@@ -1,8 +1,11 @@
-﻿import React from 'react';
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import { SEOConfig } from '../../config/SEOConfig';
 
-const SEO = ({ title }) =>
+type SEOProps = {
+  title: string;
+};
+
+const SEO = ({ title }: SEOProps) =>
 {
   const newTitle = `${title} - ${SEOConfig.title}`;
   return (

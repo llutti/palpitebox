@@ -1,6 +1,12 @@
-﻿import React, { useState } from 'react';
+﻿import { useState } from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
 import SEO from '../components/SEO';
-import { FaStar, FaRegStar } from 'react-icons/fa';
+
+type RetornoType = {
+  showCupom: boolean,
+  Cupom: string,
+  Promo: string | number | boolean
+};
 
 const Pesquisa = () =>
 {
@@ -23,7 +29,7 @@ const Pesquisa = () =>
     }
   });
   const [success, setSuccess] = useState(false);
-  const [retorno, setRetorno] = useState({});
+  const [retorno, setRetorno] = useState({} as RetornoType);
   const notas = [1, 2, 3, 4, 5];
 
   const save = async () =>

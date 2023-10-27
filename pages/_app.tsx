@@ -1,8 +1,8 @@
-import React from 'react';
-import '../css/styles.css';
+import { AppProps } from 'next/app';
 import Layout from '../components/Layout';
+import '../css/styles.css';
 
-const App = ({ Component, pageProps }) =>
+const App = ({ Component, pageProps }: AppProps) =>
 {
   return (
     <Layout>

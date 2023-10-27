@@ -1,5 +1,6 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { DateTime } from 'luxon';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { fromBase64 } from '../../utils/base64';
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID);
@@ -11,7 +12,7 @@ const gerarCupom = () =>
   return `${code.substring(0, 4)}-${code.substring(4, 4)}-${code.substring(8, 4)}`;
 };
 
-export default async (req, res) =>
+export default async (req: NextApiRequest, res: NextApiResponse) =>
 {
   try
   {
@@ -28,7 +29,7 @@ export default async (req, res) =>
     const mostrarPromocaoCell = sheetConfig.getCell(2, 0);
     const textoCell = sheetConfig.getCell(2, 1);
     let Cupom = '';
-    let Promo = '';
+    let Promo: string | number | boolean = '';
 
     if (mostrarPromocaoCell.value === 'VERDADEIRO')
     {
