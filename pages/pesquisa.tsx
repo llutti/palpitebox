@@ -36,7 +36,9 @@ const Pesquisa = () =>
   {
     if (form.Nota === 0)
     {
-      let { notaValid, errorMsg } = form;
+      const { errorMsg } = form;
+      let { notaValid } = form;
+
       notaValid = false;
       errorMsg.nota = 'Faltou sua avaliação';
 
@@ -44,7 +46,7 @@ const Pesquisa = () =>
         ...old,
         notaValid,
         errorMsg
-      }))
+      }));
 
       return;
     }
@@ -73,7 +75,7 @@ const Pesquisa = () =>
       ...old,
       loading: false
     }));
-  }
+  };
 
   const onClick = (name, value) =>
   {
@@ -84,13 +86,14 @@ const Pesquisa = () =>
       ...old,
       notaValid: true,
       [nome]: valor
-    }))
-  }
+    }));
+  };
 
   const onChange = evt =>
   {
     const { name, value } = evt.target;
-    let { nomeValid, emailValid, whatsappValid, formValid, errorMsg } = form;
+    const { errorMsg } = form;
+    let { nomeValid, emailValid, whatsappValid, formValid } = form;
 
     if ((form.Nome === '')
       && ((name === 'Email')
@@ -144,8 +147,8 @@ const Pesquisa = () =>
       formValid,
       errorMsg,
       [name]: value
-    }))
-  }
+    }));
+  };
 
   return (
     <div>
@@ -188,7 +191,7 @@ const Pesquisa = () =>
           }
 
           <div className='flex flex-row flex-wrap itens-center b-6 my-5'>
-            <label className='font-bold w-1/7'>Avaliação:</label>
+            <span className='font-bold w-1/7'>Avaliação:</span>
             {
               notas.map(nota =>
               {
@@ -201,7 +204,7 @@ const Pesquisa = () =>
                       nota > form.Nota && < FaRegStar key={'star' + nota} onClick={() => onClick('Nota', nota)} />
                     }
                   </label>
-                )
+                );
               })
             }
             {
@@ -255,6 +258,6 @@ const Pesquisa = () =>
 
     </div>
   );
-}
+};
 
 export default Pesquisa;

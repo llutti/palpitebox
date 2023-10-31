@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = () =>
@@ -7,7 +8,7 @@ const Header = () =>
       <div className='container mx-auto flex items-end justify-between flex-col md:flex-row'>
         <div className='w-full md:w-1/4 ml-auto flex items-center justify-center'>
           <Link href='/'>
-            <img src='/logo_palpitebox.png' alt='PalpiteBox' />
+            <Image width={100} height={100} src='/logo_palpitebox.png' alt='PalpiteBox' />
           </Link>
         </div>
 

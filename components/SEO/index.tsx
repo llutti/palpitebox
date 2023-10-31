@@ -19,14 +19,14 @@ const SEO = ({ title }: SEOProps) =>
       <meta name="author" content={SEOConfig.author} />
       <meta name="image" content={SEOConfig.image} />
 
-      // OpenGraph (Facebook)
+      {/* // OpenGraph (Facebook) */}
       {SEOConfig.type && <meta property="og:type" content={SEOConfig.type} />}
       {SEOConfig.url && <meta property="og:url" content={SEOConfig.url} />}
       {SEOConfig.title && <meta property="og:title" content={SEOConfig.title} />}
       {SEOConfig.description && <meta property="og:description" content={SEOConfig.description} />}
       {SEOConfig.image && <meta property="og:image" content={SEOConfig.image} />}
 
-      // Twitter
+      {/* // Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       {SEOConfig.twitterUsername && <meta name="twitter:creator" content={SEOConfig.twitterUsername} />}
       {SEOConfig.title && <meta name="twitter:title" content={SEOConfig.title} />}
@@ -34,7 +34,7 @@ const SEO = ({ title }: SEOProps) =>
       {SEOConfig.image && <meta name="twitter:image" content={SEOConfig.image} />}
 
     </Head>
-  )
+  );
 };
 
 export default SEO;

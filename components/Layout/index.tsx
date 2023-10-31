@@ -17,6 +17,6 @@ const Layout = ({ children }: LayoutProps) =>
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

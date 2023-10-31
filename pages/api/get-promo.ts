@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { doc } from '../../utils/googleSpreadSheet';
 
-export default async (req: NextApiRequest, res: NextApiResponse) =>
+const handler = async (req: NextApiRequest, res: NextApiResponse) =>
 {
   try
   {
@@ -28,3 +28,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) =>
     }));
   }
 };
+
+export default handler;

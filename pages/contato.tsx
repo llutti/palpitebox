@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import SEO from '../components/SEO';
 
 const Contato = () =>
@@ -14,6 +15,6 @@ const Contato = () =>
       </div>
     </div>
   );
-}
+};
 
 export default Contato;

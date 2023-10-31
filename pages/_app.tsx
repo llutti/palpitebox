@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }: AppProps) =>
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  )
-}
+  );
+};
 
 export default App;

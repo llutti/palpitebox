@@ -9,7 +9,7 @@ const gerarCupom = () =>
   return `${code.substring(0, 4)}-${code.substring(4, 8)}-${code.substring(8)}`;
 };
 
-export default async (req: NextApiRequest, res: NextApiResponse) =>
+const handler = async (req: NextApiRequest, res: NextApiResponse) =>
 {
   try
   {
@@ -61,3 +61,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) =>
     res.end('error');
   }
 };
+
+export default handler;
