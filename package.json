@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next --turbopack -p 7000",
     "build": "next build",
+    "build:dev": "next build --turbopack",
     "start": "next start",
     "start:dev": "next start -p 7000",
     "lint": "next lint"
@@ -35,7 +36,7 @@
     "eslint-plugin-react": "^7.34.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.4.2"
+    "typescript": "^5.9.2"
   },
   "overrides": {
     "@types/react": "19.1.9"
