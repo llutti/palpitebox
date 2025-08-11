@@ -17,14 +17,14 @@ const Index = () =>
       </p>
 
       <div className="text-center my-12">
-        <Link href='/pesquisa' className='bg-blue-400 px-12 py-4 font-bold  rounded-lg shadow-lg hover:shadow'>
+        <Link href='/pesquisa' className='bg-blue-400 px-12 py-4 font-bold  rounded-lg shadow-lg hover:shadow-sm'>
           Acessar Pesquisa
         </Link>
       </div>
 
       {
         !data &&
-        <div className="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-none justify-center items-center flex">
+        <div className="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-hidden justify-center items-center flex">
           <div className="relative w-auto my-6 mx-auto max-w-6xl">
             <div className="mx-auto loader"></div>
           </div>

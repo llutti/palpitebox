@@ -164,28 +164,28 @@ const Pesquisa = () =>
         <div className='w-1/1 sm:w-1/2 lg:w-1/3 mx-auto pb-3'>
 
           <label htmlFor='Nome' className='font-bold'>Seu nome:</label>
-          <input type='text' id='Nome' name='Nome' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} value={form.Nome} />
+          <input type='text' id='Nome' name='Nome' className='w-full p-3 block shadow-sm bg-blue-100 my-2 rounded-sm' placeholder='Nome' onChange={onChange} value={form.Nome} />
           {
             !form.nomeValid &&
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded relative" role="alert">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded-sm relative" role="alert">
               <span className="block sm:inline">{form.errorMsg.nome}</span>
             </div>
           }
 
           <label htmlFor='Email' className='font-bold'>E-mail:</label>
-          <input type='text' id='Email' name='Email' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='E-mail' onChange={onChange} value={form.Email} />
+          <input type='text' id='Email' name='Email' className='w-full p-3 block shadow-sm bg-blue-100 my-2 rounded-sm' placeholder='E-mail' onChange={onChange} value={form.Email} />
           {
             !form.emailValid && !!form.Email &&
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded relative" role="alert">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded-sm relative" role="alert">
               <span className="block sm:inline">{form.errorMsg.email}</span>
             </div>
           }
 
           <label htmlFor='Whatsapp' className='font-bold'>Whatsapp:</label>
-          <input type='text' id='Whatsapp' name='Whatsapp' className='w-full p-3 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} value={form.Whatsapp} />
+          <input type='text' id='Whatsapp' name='Whatsapp' className='w-full p-3 block shadow-sm bg-blue-100 my-2 rounded-sm' placeholder='Whatsapp' onChange={onChange} value={form.Whatsapp} />
           {
             !form.whatsappValid && !!form.Whatsapp &&
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded relative" role="alert">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 mb-2 rounded-sm relative" role="alert">
               <span className="block sm:inline">{form.errorMsg.whatsapp}</span>
             </div>
           }
@@ -209,14 +209,14 @@ const Pesquisa = () =>
             }
             {
               !form.notaValid &&
-              <div className="bg-red-100 border border-red-400 text-red-700 w-full px-4 py-2 mb-2 rounded relative" role="alert">
+              <div className="bg-red-100 border border-red-400 text-red-700 w-full px-4 py-2 mb-2 rounded-sm relative" role="alert">
                 <span className="block sm:inline">{form.errorMsg.nota}</span>
               </div>
             }
           </div>
 
           <div className='text-center'>
-            <button className={'bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' + (!form.formValid && ' opacity-50 cursor-not-allowed')} disabled={!form.formValid} onClick={save}>Salvar</button>
+            <button className={'bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow-sm' + (!form.formValid && ' opacity-50 cursor-not-allowed')} disabled={!form.formValid} onClick={save}>Salvar</button>
           </div>
         </div>
       }
@@ -249,7 +249,7 @@ const Pesquisa = () =>
 
       {
         form.loading &&
-        <div className="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-none justify-center items-center flex">
+        <div className="overflow-x-hidden overflow-y-auto bg-black bg-opacity-50 fixed inset-0 z-50 outline-hidden justify-center items-center flex">
           <div className="relative w-auto my-6 mx-auto max-w-6xl">
             <div className="mx-auto loader"></div>
           </div>
