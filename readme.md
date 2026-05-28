@@ -2,58 +2,61 @@
 
 [![HitCount](http://hits.dwyl.com/llutti/llutti/palpitebox.svg)](http://hits.dwyl.com/llutti/llutti/palpitebox)
 
-Uma caixa de sugestões na qual os clientes podem deixar opiniões e sugestões sobre os estabelecimentos comerciais e, em troca, receber cupons de desconto e vantagens.
+Uma caixa de sugestoes na qual os clientes podem deixar opinioes e sugestoes sobre estabelecimentos comerciais e, em troca, receber cupons de desconto e vantagens.
 
 ![Print da tela do aplicativo](https://github.com/llutti/palpitebox/blob/main/screens/Print-tela-principal.png)
 
-### Pré-requisitos:
-- NodeJS (versão 18 ou superior) [https://www.nodejs.org]
-- NPM [*instalado juntamento com o NodeJS*] ou YARN [https://classic.yarnpkg.com/]
-- Editor de código (Visual Studio Code, por exemplo) [https://code.visualstudio.com/]
+### Pre-requisitos
 
-## Construído com:
-* [NodeJS](https://www.nodejs.org)
-* [NextJS](https://nextjs.org/) - React Framework.
-* [TailwindCSS](https://tailwindcss.com/) - Um CSS framework para rápida contrução de interfaces customizadas.
-* [Figma](https://figma.com/) - Ferramenta Online para prototipagem.
-* [PurgeCSS](https://purgecss.com/) - Remover CSS não utilizados.
-* [Google Docs](https://g.co/kgs/MVHtjb) - Planilha utilizada como repositório
+- [Node.js](https://www.nodejs.org) 22 ou superior
+- NPM, instalado junto com o Node.js
+- Editor de codigo, como [Visual Studio Code](https://code.visualstudio.com/)
+- Credenciais de service account para acesso a uma planilha do Google Sheets
 
-## Criar o projeto
-- Criar a pasta: `md palpitebox`
-- Entrar na pasta: `cd palpitebox`
-- Inicializar o gerenciador de pacotes: `yarn init -y` ou `npm ini -y`
-- Editar o arquivo `package.json` e configurar os `scripts` conforme abaixo:
-  ``` json
-    ...
-    "scripts": {
-      "dev": "next",
-      "start": "next start",
-      "build": "next build"
-    },
-    ...
-  ```
+### Variaveis de ambiente
 
-## Instalação das dependencias
-- `npm i next react react-dom`
-- `npm i tailwindcss`
-- `npx tailwindcss init`
-- `npm i postcss-import`
-- `npm i autoprefixer`
-- `npm i swr`
-- `npm i google-spreadsheet`
-- `npm i luxon`
-- `npm i -D @types/luxon`
+Crie um arquivo `.env.local` com base em `.env.example`:
 
-## Author:
+```env
+SHEET_CLIENT_EMAIL=<client email do service credential>
+SHEET_PRIVATE_KEY=<private key do service credential em base64>
+SHEET_DOC_ID=<id da planilha>
+```
+
+## Construido com
+
+- [Node.js](https://www.nodejs.org) >= 22
+- [Next.js](https://nextjs.org/) 16
+- [React](https://react.dev/) 19
+- [TypeScript](https://www.typescriptlang.org/) 5
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Figma](https://figma.com/)
+- [SWR](https://swr.vercel.app/)
+- [Google Sheets API](https://developers.google.com/sheets/api)
+- [Luxon](https://moment.github.io/luxon/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+## Instalacao
+
+```bash
+npm install
+```
+
+## Scripts disponiveis
+
+- `npm run dev` - inicia o ambiente de desenvolvimento na porta 7000.
+- `npm run build` - gera a versao de producao.
+- `npm run start` - inicia a aplicacao em modo producao.
+- `npm run start:dev` - inicia a aplicacao em modo producao na porta 7000.
+- `npm run lint` - executa o ESLint.
+
+## Author
 
 * **Luciano Cargnelutti** - [LinkedIn](https://www.linkedin.com/in/llutti/)
 
+## Licenca
 
-
-## Licença
-
-Este projeto é licenciado sobre a licença MIT - veja [LICENSE.md](LICENSE.md) para mais informações.
+Este projeto e licenciado sob a licenca MIT - veja [LICENSE.md](LICENSE.md) para mais informacoes.
 
 ## Acknowledgments
 

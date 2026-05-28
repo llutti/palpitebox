@@ -40,12 +40,14 @@ const Pesquisa = () =>
       let { notaValid } = form;
 
       notaValid = false;
-      errorMsg.nota = 'Faltou sua avaliação';
 
       setForm(old => ({
         ...old,
         notaValid,
-        errorMsg
+        errorMsg: {
+          ...errorMsg,
+          nota: 'Faltou sua avaliação'
+        }
       }));
 
       return;
@@ -92,7 +94,7 @@ const Pesquisa = () =>
   const onChange = evt =>
   {
     const { name, value } = evt.target;
-    const { errorMsg } = form;
+    const errorMsg = { ...form.errorMsg };
     let { nomeValid, emailValid, whatsappValid, formValid } = form;
 
     if ((form.Nome === '')

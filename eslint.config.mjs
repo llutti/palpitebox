@@ -1,17 +1,27 @@
-import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
-const compat = new FlatCompat(
+
+const eslintConfig = defineConfig([
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+  ]),
   {
-    baseDirectory: import.meta.dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all,
-  });
-
-
-const eslintConfig = [
-  ...compat.extends('next', 'next/core-web-vitals', 'next/typescript'),
-  {
+    settings: {
+      react: {
+        version: '19',
+      },
+    },
+    files: ['**/*.ts', '**/*.tsx'],
+    extends: [
+      ...nextVitals,
+      ...nextTs,
+    ],
     rules: {
       'react/display-name': 'off',
 
@@ -35,8 +45,6 @@ const eslintConfig = [
       'no-empty-function': 'off',
       '@typescript-eslint/no-empty-function': 'off',
 
-      //       'no-unused-vars': 'off',
-
       '@typescript-eslint/prefer-for-of': 'off',
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/consistent-type-definitions': 'off',
@@ -45,6 +53,6 @@ const eslintConfig = [
       'no-cond-assign': ['error', 'always'],
     },
   }
-];
+]);
 
 export default eslintConfig;
